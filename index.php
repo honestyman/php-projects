@@ -1,4 +1,15 @@
 <?php
+    if(isset($_POST["submit"])){
+        if(empty($_POST["city"])){
+            echo "Enter city name!";
+        }else{
+            $city = $_POST["city"];
+            $API_KEY = "API_KEY";
+            $API = "https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}";
+            $API_DATA = file_get_contents($API);
+            print_r($API_DATA);
+        }
+    }
 
 ?>
 
