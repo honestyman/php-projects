@@ -10,7 +10,12 @@
             //print_r($API_DATA);
 
             $weather = json_decode($API_DATA, true);
-            print_r($weather);
+            //print_r($weather);
+            $celsius = $weather["main"]["temp"] - 237;
+
+            echo $weather["weather"][0]["description"];
+            echo "<br>";
+            echo $celsius . "degrees Celsius";
         }
 
 
