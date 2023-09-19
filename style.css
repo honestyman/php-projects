@@ -1,0 +1,22 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    //background-image: url(image.jpg);
+    color: white;
+    font-family: poppin, 'Times New Roman', Times, serif;
+    font-size: large;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 440px;
+}
+
+h1{
+    font-weight: 700;
+}
