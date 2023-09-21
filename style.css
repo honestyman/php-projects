@@ -1,9 +1,10 @@
 body{
-    margin: 0px;
-    padding: 0px;
+    //margin: 0px;
+    //padding: 0px;
     box-sizing: border-box;
     //background-image: url(image.jpg);
-    color: white;
+    //color: white;
+    //background-color: black;
     font-family: poppin, 'Times New Roman', Times, serif;
     font-size: large;
     background-size: cover;
@@ -11,10 +12,17 @@ body{
 }
 
 .container{
-    text-align: center;
+    //background-color: white;
+    /*text-align: center;
     justify-content: center;
     align-items: center;
-    width: 440px;
+    width: 440px;*/
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px;
+    border-radius: 10px;
 }
 
 h1{
