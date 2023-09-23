@@ -1,30 +1,31 @@
 body{
-    //margin: 0px;
-    //padding: 0px;
+    margin: 0px;
+    padding: 100px;
     box-sizing: border-box;
-    //background-image: url(image.jpg);
-    //color: white;
-    //background-color: black;
+    background-image: url(image5.jpg);
     font-family: poppin, 'Times New Roman', Times, serif;
     font-size: large;
-    background-size: cover;
+    background-size: auto;
+    //background-size: 1370px 615px;
+    background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
 .container{
-    //background-color: white;
-    /*text-align: center;
+    text-align: center;
     justify-content: center;
     align-items: center;
-    width: 440px;*/
-    width: 100%;
-    max-width: 540px;
-    background: #fff;
-    margin: 100px auto 20px;
-    padding: 40px 30px;
-    border-radius: 10px;
+    width: 440px;
+    color: white;
+    font-size: 20px;
 }
 
 h1{
     font-weight: 700;
+    margin-top: 150px;
+}
+
+input{
+    width: 350px;
+    padding: 5px;
 }
