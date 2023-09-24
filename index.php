@@ -34,40 +34,46 @@
 
     <?php
 
-    if(isset($_POST["submit"]) && empty($_POST["city"])){
-        echo "<br>";
+    if(isset($_POST["submit"])){
+        if(empty($_POST["city"])){
+            echo "<br>";
             $error = "Enter the name of the city!";
-            //echo "Enter the name of the city!";
             echo '<div class="alert alert-danger role="alert">' . $error . '</div>';
 
-    }else if(isset($_POST["submit"]) && !empty($_POST["city"])){
+        }else{
             $city = $_POST["city"];
             $API_KEY = "API_KEY";
             $API = "https://api.openweathermap.org/data/2.5/weather?q=$city&appid=$API_KEY";
-            $API_DATA = file_get_contents($API);
-            //print_r($API_DATA);
+            $API_DATA = @file_get_contents($API);
+            //$weather = json_decode($API_DATA, true);
 
-            $weather = json_decode($API_DATA, true);
-            //print_r($weather);
-            $celsius = $weather["main"]["temp"] - 237;
-            //date_default_timezone_set("UTC");
+            if($API_DATA === false){
+                echo "<br>";
+                $error = "The name of the city is not valid! Try again!";
+                echo '<div class="alert alert-danger role="alert">' . $error . '</div>';
+            }else{
+                $weather = json_decode($API_DATA, true);
+                $celsius = $weather["main"]["temp"] - 237;
+                //date_default_timezone_set("UTC");
 
-            echo "<br>";
-            echo $city . ", " .$weather["sys"]["country"];
-            echo "<br>";
-            echo "Current time: " . date("F j, Y, g:i a");
-            echo "<br>";
-            echo "Weather conditions: " . $weather["weather"][0]["description"];
-            echo "<br>";
-            echo "Temperature: " . $celsius . "&degC";
-            echo "<br>";
-            echo "Athmospheric pressure: " . $weather["main"]["pressure"] . "hPa";
-            echo "<br>";
-            echo "Wind speed: " . $weather["wind"]["speed"] . "m/sec";
-            echo "<br>";
-            echo "Cloundness: " . $weather["clouds"]["all"] . "%";
-
+                echo "<br>";
+                echo $city . ", " .$weather["sys"]["country"];
+                echo "<br>";
+                echo "Current time: " . date("F j, Y, g:i a");
+                echo "<br>";
+                echo "Weather conditions: " . $weather["weather"][0]["description"];
+                echo "<br>";
+                echo "Temperature: " . $celsius . "&degC";
+                echo "<br>";
+                echo "Athmospheric pressure: " . $weather["main"]["pressure"] . "hPa";
+                echo "<br>";
+                echo "Wind speed: " . $weather["wind"]["speed"] . "m/sec";
+                echo "<br>";
+                echo "Cloundness: " . $weather["clouds"]["all"] . "%";
+            }
         }
+
+    }
 ?>
     </div>
     </form>
