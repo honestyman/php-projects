@@ -1,3 +1,9 @@
+/*var form = document.getElementById("form");
+
+form.addEventListener("submit", function(event){
+    event.preventDefault();
+});*/
+
 /*$(document).ready(function(){
     $("#form").submit(function(event){
         event.preventDefault();

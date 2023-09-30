@@ -2,7 +2,7 @@ body{
     margin: 0px;
     padding: 100px;
     box-sizing: border-box;
-    background-image: url(image5.jpg);
+    background-image: url(image.jpg);
     font-family: poppin, 'Times New Roman', Times, serif;
     font-size: large;
     background-size: auto;
@@ -26,6 +26,23 @@ h1{
 }
 
 input{
-    width: 350px;
+    width: 300px;
     padding: 5px;
+}
+
+.output{
+    //background: white;
+    //text-align: center;
+    //justify-content: center;
+    //align-items: center;
+    width: 440px;
+    margin: auto;
+    //color: white;
+    font-size: 20px;
+    //background-color: white;
+}
+
+.alert{
+    width: 270px;
+    margin: auto;
 }
