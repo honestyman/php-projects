@@ -43,31 +43,22 @@ if(isset($_POST["submit"])){
     }else{
         $city = $_POST["city"];
         $API_KEY = "API_KEY";
+        $API = "https://api.openweathermap.org/data/2.5/weather?q=$city&appid=$API_KEY";
         $API_DATA = @file_get_contents($API);
-        //$weather = json_decode($API_DATA, true);
 
         if($API_DATA === false){
-            echo "<br>";
             $error = "The name of the city is not valid! Try again!";
-            echo '<div class="alert alert-danger role="alert">' . $error . '</div>';
+            echo '<br> <div class="alert alert-danger role="alert">' . $error . '</div>';
         }else{
             $weather = json_decode($API_DATA, true);
-            $celsius = $weather["main"]["temp"] - 237;
-            //date_default_timezone_set("UTC");
+            $celsius = $weather["main"]["temp"] - 272.15;
 
-            echo "<br>";
-            echo $city . ", " .$weather["sys"]["country"];
-            echo "<br>";
-            echo "Current time: " . date("F j, Y, g:i a");
-            echo "<br>";
-            echo "Weather conditions: " . $weather["weather"][0]["description"];
-            echo "<br>";
-            echo "Temperature: " . $celsius . "&degC";
-            echo "<br>";
-            echo "Athmospheric pressure: " . $weather["main"]["pressure"] . "hPa";
-            echo "<br>";
-            echo "Wind speed: " . $weather["wind"]["speed"] . "m/sec";
-            echo "<br>";
+            echo "<br>" . strtoupper($city) . ", " .$weather["sys"]["country"] . "<br>";
+            echo "Current date: " . date("F j, Y") . "<br>";
+            echo "Weather conditions: " . $weather["weather"][0]["description"] . "<br>";
+            echo "Temperature: " . $celsius . "&degC" . "<br>";
+            echo "Athmospheric pressure: " . $weather["main"]["pressure"] . "hPa" . "<br>";
+            echo "Wind speed: " . $weather["wind"]["speed"] . "m/sec" . "<br>";
             echo "Cloundness: " . $weather["clouds"]["all"] . "%";
         }
     }
