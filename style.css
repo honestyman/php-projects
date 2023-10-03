@@ -6,7 +6,6 @@ body{
     font-family: poppin, 'Times New Roman', Times, serif;
     font-size: large;
     background-size: auto;
-    //background-size: 1370px 615px;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -26,20 +25,16 @@ h1{
 }
 
 input{
-    width: 300px;
+    width: 250px;
     padding: 5px;
+    border-radius: 15px;
+    border: none;
 }
 
 .output{
-    //background: white;
-    //text-align: center;
-    //justify-content: center;
-    //align-items: center;
     width: 440px;
     margin: auto;
-    //color: white;
     font-size: 20px;
-    //background-color: white;
 }
 
 .alert{

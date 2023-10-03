@@ -5,14 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>The Weather App</title>
-    <!--jquery cdn link-->
-    <script
-    src="https://code.jquery.com/jquery-3.6.4.min.js"
-    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="crossorigin="anonymous"></script>
-    <!--ajax link-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <!--js link-->
-    <script src="script.js" defer></script>
     <!--css file-->
     <link rel="stylesheet" href="style.css">
     <!--bootstrap link-->
@@ -27,12 +19,10 @@
         <p><label for="city">Enter name of the city below</label></p>
         <p><input type="text" name="city" placeholder="Name of the city"></p>
         <button class="btn btn-success" id="button" type="submit" name="submit">Check weather</button>
-        <!--<p><input type="submit" name="submit"></p>-->
     
-    
+    <div id="output" class="output">
 
-    <div class="output">
-    <?php
+<?php
 
 if(isset($_POST["submit"])){
     if(empty($_POST["city"])){
@@ -42,7 +32,8 @@ if(isset($_POST["submit"])){
 
     }else{
         $city = $_POST["city"];
-        $API_KEY = "API_KEY";
+        //$API_KEY = "API_KEY";
+        $API_KEY = "19fdeaeefe22a24143070b3cf1b420dd";
         $API = "https://api.openweathermap.org/data/2.5/weather?q=$city&appid=$API_KEY";
         $API_DATA = @file_get_contents($API);
 
@@ -62,7 +53,6 @@ if(isset($_POST["submit"])){
             echo "Cloundness: " . $weather["clouds"]["all"] . "%";
         }
     }
-
 }
 ?>
     </div>
@@ -70,6 +60,4 @@ if(isset($_POST["submit"])){
     </div>
 
 </body>
-
 </html>
-
