@@ -1,8 +1,10 @@
 # PHP projects
 1. Global weather search app using OpenWeatherMap API.
 
-![APP_3](https://github.com/Valda1/php-projects/assets/104151972/0b56d58c-3d49-42de-b400-1bcecdfb947b)
-![APP_4](https://github.com/Valda1/php-projects/assets/104151972/0c120509-994d-4e62-b2de-2436e32eed63)
+![APP_3](https://github.com/Valda1/php-projects/assets/104151972/29118262-3183-4a8a-ab4d-bce13f12dc4b)
+![APP_4](https://github.com/Valda1/php-projects/assets/104151972/1f3144a2-70b5-47b4-afbc-c2ebf8eb7916)
+
+
 
 
 
