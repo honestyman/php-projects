@@ -32,7 +32,8 @@ if(isset($_POST["submit"])){
 
     }else{
         $city = $_POST["city"];
-        $API_KEY = "API_KEY";
+        //$API_KEY = "API_KEY";
+        $API_KEY = "19fdeaeefe22a24143070b3cf1b420dd";
         $API = "https://api.openweathermap.org/data/2.5/weather?q=$city&appid=$API_KEY";
         $API_DATA = @file_get_contents($API);
 
