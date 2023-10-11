@@ -1,9 +1,11 @@
-# Weather app
-Global weather search app using OpenWeatherMap API.
+# PHP projects
+1. Global weather search app using OpenWeatherMap API.
+
+![APP_3](https://github.com/Valda1/php-projects/assets/104151972/0b56d58c-3d49-42de-b400-1bcecdfb947b)
+![APP_4](https://github.com/Valda1/php-projects/assets/104151972/0c120509-994d-4e62-b2de-2436e32eed63)
 
 
-![APP](https://github.com/Valda1/weather-app/assets/104151972/0767acc7-d231-4874-ade3-ddf79bd0600c)
 
-![APP_2](https://github.com/Valda1/weather-app/assets/104151972/4289609e-48f7-4c31-b797-f0d5be57bcb2)
+2. Signup and login system
 
 
