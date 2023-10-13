@@ -8,7 +8,10 @@
 
 
 
-2. Signup and login system
-3. Program to send an e-mail from Localhost
+2. Program to send an e-mail to any existing e-mail address from Localhost
+
+![app_email_2](https://github.com/Valda1/php-projects/assets/104151972/e8969018-6fa8-4638-8097-c6b3636853a1)
+
+3. Signup and login system
 
 
