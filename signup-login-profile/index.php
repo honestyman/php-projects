@@ -16,6 +16,14 @@
     <input type="text" name="email" placeholder="E-mail">
     <button type="submit" name="submit">Signup</button>
 </form>
+
+<h3>Login</h3>
+
+<form action="includes/login.php" method="post">
+    <input type="text" name="uid" placeholder="Username">
+    <input type="password" name="pwd" placeholder="Password">
+    <button type="submit" name="submit">Login</button>
+</form>
 </body>
 
 </html>
