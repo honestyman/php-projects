@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,6 +28,12 @@
     <input type="password" name="pwd" placeholder="Password">
     <button type="submit" name="submit">Login</button>
 </form>
+
+<h3>Logout</h3>
+
+    <form action="includes/logout.php" method="post">
+        <button>Logout</button>
+    </form>
 </body>
 
 </html>
