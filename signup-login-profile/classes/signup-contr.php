@@ -1,6 +1,6 @@
 <?php
 
-class SignupContr{
+class SignupContr extends Signup{
 
     private $uid;
     private $pwd;
@@ -14,7 +14,7 @@ class SignupContr{
         $this->email = $email;
     }
 
-    private function signupUser(){
+    public function signupUser(){
         if($this->emptyInput() == false){
             header("Location: ../index.php?error=emptyinput");
             exit();
@@ -47,7 +47,7 @@ class SignupContr{
     private function emptyInput(){
         $result;
 
-        if(empty($this->uid || $this->pwd || $this->pwdRepeat ||$this->email)){
+        if(empty($this->uid || $this->pwd || $this->pwdRepeat || $this->email)){
             $result = false;
         }else{
             $result = true;
