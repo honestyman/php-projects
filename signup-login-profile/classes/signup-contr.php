@@ -14,6 +14,35 @@ class SignupContr{
         $this->email = $email;
     }
 
+    private function signupUser(){
+        if($this->emptyInput() == false){
+            header("Location: ../index.php?error=emptyinput");
+            exit();
+        }
+
+        if($this->invalidUID() == false){
+            header("Location: ../index.php?error=username");
+            exit();
+        }
+
+        if($this->invalidEmail() == false){
+            header("Location: ../index.php?error=email");
+            exit();
+        }
+
+        if($this->pwdMatch() == false){
+            header("Location: ../index.php?error=passwordmatch");
+            exit();
+        }
+
+        if($this->uidTakenCheck() == false){
+            header("Location: ../index.php?error=useroremailtaken");
+            exit();
+        }
+
+        $this->setUser($this->uid, $this->pwd, $this->email);
+    }
+
     //ERROR HANDLERS
     private function emptyInput(){
         $result;

@@ -6,6 +6,7 @@ if(isset($_POST[submit])){
     $pwdRepeat = $_POST["pwdRepeat"];
     $email = $_POST["email"];
 
+    include "../classes/dbh.php";
     include "../classes/signup.classes.php";
     include "../classes/signup-contr.php";
 
