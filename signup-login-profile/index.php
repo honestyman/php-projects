@@ -1,16 +1,7 @@
 <?php
-session_start();
+include_once "header.php";
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
 <h3>Signup</h3>
 
 <form action="includes/signup.php" method="post">
