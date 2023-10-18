@@ -39,5 +39,25 @@ class Signup extends Dbh{
 
     }
 
+    protected function getUserID($uid){
+        $stmt = $this->connect()->prepare("SELECT users_id FROM users WHERE users_uid = ?;");
+
+        if(!$stmt->execute(array($uid))){
+            $stmt = null;
+            header("Location: profile.php?error=stmtfailed");
+            exit();
+        }
+
+        if($stmt->rowCount() == 0){
+            $stmt = null;
+            header("Location: profile.php?error=profilenotfound");
+            exit();
+        }
+
+        $profileData = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+        return $profileData;
+    }
+
 
 }
