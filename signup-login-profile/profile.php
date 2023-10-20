@@ -1,15 +1,28 @@
 <?php
 include_once "header.php";
+include "classes/dbh.php";
+include "classes/profileinfo.classes.php";
+include "classes/profileinfo-contr.php";
+include "classes/profileinfo-view.php";
+$profileInfo = new ProfileInfoView();
 ?>
 
 <h3>ABOUT</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut interdum metus, fringilla vestibulum lorem.</p>
+<p>
+    <?php
+    $profileInfo->fetchAbout($_SESSION["userid"]);
+    ?>
+</p>
 
 <h3>HI!</h3>
-<p>Suspendisse potenti. Phasellus imperdiet elit mi, sit amet blandit sapien sollicitudin lobortis.
-    Sed enim dui, sodales nec quam eu, aliquet dapibus est.
+<p>
+    <?php
+    $profileInfo->fetchTitle($_SESSION["userid"]);
+    ?>
 <br><br>
-Praesent tortor lectus, malesuada in rutrum quis, tempus quis sem. Aenean tristique arcu non interdum suscipit. 
+    <?php
+    $profileInfo->fetchText($_SESSION["userid"]);
+    ?>
 </p>
 
 </body>
